@@ -1,0 +1,345 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+    max-width: 1440px;
+    margin:auto;
+}
+body {
+    box-sizing: border-box;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.829) ;
+    background-color: #262626;
+}
+/*******************Header&nav******************/
+header {
+    padding-top: 25px;
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1) ), url(exclamation-point.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;  
+}
+
+.logo {
+    /* flex-basis: 40%; */ 
+    color:rgba(255, 255, 255, 0.829);
+}
+
+.logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.main-menu {
+    display:flex;
+    flex-wrap: wrap;
+    list-style:none;
+    /* align-items: center; */
+    justify-content: center;
+    align-content: center;
+}
+
+.menu-bar li {
+    margin-right:10px;
+    padding:10px;
+}
+
+.menu-bar a {
+    text-decoration:none;
+    color:rgba(255, 255, 255, 0.829);
+    font-size: 20px;
+    font-weight: bold; 
+}
+
+.main-menu>li:hover a {
+    color: #EA7100;
+    /* border-radius:5px; */
+}
+.sub-menu {
+    display: none;
+    margin: 0;
+    width: 220px;  
+    background-color:rgba(234, 113, 0, 0.8) ; 
+}
+
+.sub-menu li {
+    list-style: none;
+    text-align: left;
+}
+
+.sub-menu ul li a {
+    text-decoration:none;
+    color:rgba(255, 255, 255, 0.829);
+    /* font-size: 20px; */
+    font-weight: bold;
+}
+  
+.sub-menu ul {
+      margin: 0;
+}
+
+.box {
+    position: relative;
+}
+.main-menu li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    border-radius: 5px;
+    top: 40px;
+    left: -70%;
+}
+  /**************for iphone se***************/
+  @media (max-width:360px) {
+    .main-menu li:hover .sub-menu{
+        display: block;
+        position: absolute;
+        background-color:rgba(234, 113, 0, 0.8) ;
+        border-radius: 5px;
+        top: 40px;
+        left: -200%;
+    }
+}
+.content {
+    display: flex;
+    padding-bottom: 5%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+/*************************articles&events*********************/
+.events-1, .events-2,.events-3,.events-4,img {
+    margin: 10% 0;
+}
+.event-1,.event-2,.event-3,.event-4,.event-5 {
+    line-height: 1.5;
+
+}
+.event-content {
+    width: 92%;
+    margin: auto;
+}
+.event-content h2 {
+    color: #EA7100;
+}
+.event-content ul{
+    width: 70%;
+    margin: auto;
+    padding-top: 1%;
+}
+.common-1 a {
+    text-decoration: none;
+    color: inherit;
+    background-color: #EA7100;
+    padding: 2% 15%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin:auto;
+}
+.common-2 {
+    padding-bottom: 5%;
+}
+
+/*********************about&contact***********************/
+.c-details {
+    background-color: #262626;
+    border-top: 0.3px solid #EA7100;
+    margin: 3% 0;
+}
+.common {
+    width: 90%;
+    margin:0 auto;
+    padding: 2%;
+    line-height: 1.5;
+}
+
+.about {
+    padding-top: 15%;
+}
+
+.common h1 {
+    color: #EA7100 ;
+}
+.about p,.contact h1 {
+    padding-bottom:3% ;
+    padding-top: 5%;
+}
+.icons a {
+    color: #EA7100;
+    margin: 10% 2%;
+    font-size: 150%;
+    /* height: 10vh; */
+}
+
+.icons i:hover {
+    transform: scale(1.1);
+}
+
+.quicklinks {
+    display: none;
+}
+/******************footer**********************/
+footer {
+    background-color:#262626 ;
+}
+footer p {
+    padding: 4% 0;
+    color: #EA7100;
+    width: 80%;
+    margin: auto;
+}
+.call {
+    text-decoration: none;
+    color:  #EA7100 ;
+}
+/****************for-pc**********************/
+/*******************header&nav***************/
+@media only screen and (min-width:800px) { 
+    body {
+        margin: 0;
+        padding: 0;
+    }   
+    .content {
+        height: 40vh;
+        
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 5%;
+    }
+    .main-menu li:hover .sub-menu{
+        display: block;
+        position: absolute;
+        /* background-color:rgba(234, 113, 0, 0.8) ; */
+        border-radius: 5px;
+        top: 40px;
+        left: 0;
+  
+    }
+    .logo {
+        flex-basis: 20%;
+    }
+    .menu-bar {
+        margin: 0;
+        flex-basis:50%;
+    }
+    /*****************past-events************************/
+    .common-1 {
+        margin:4% 0;
+    }
+    .event-content h2 {
+        padding-bottom: 2%;
+    }
+    .common-2 {
+        display: flex;
+        width: 80%;
+        margin:3% auto;
+        justify-content: space-evenly;
+        padding-bottom: 0;
+    }
+    
+    .event-content {
+        flex-basis:50%;
+        align-self: flex-start;
+        margin: 0;
+        text-align: justify;
+        order: 1;
+    }
+
+    article:nth-of-type(even) .common-2 .e-image1 {
+        order: 2;
+    }
+
+    .e-image1 {
+        flex-basis:40%;
+        margin: 0;
+
+    }
+
+    .e-image1 img {
+        margin: 0;
+    }
+    .common-1 a {
+        width: 10%;
+        padding: 1% 10%;
+    }
+    /*****************footer***************/
+    .c-details {
+        display: flex;
+        justify-content: space-evenly;
+ 
+    }
+
+    .common {
+        margin-top: 3%;
+    }
+
+    .about {
+        flex-basis: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 2%;
+    }
+
+    .icons a {
+        margin: 0;
+        padding-right: 10%;
+    }
+
+    .about p {
+        text-align: left;
+    }
+
+    .contact {
+     flex-basis: 30%;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items: flex-start;
+
+    }
+
+    .contact .call {
+        text-decoration: none;
+        color: #EA7100;
+    }
+
+    .contact h1 {
+        padding-top: 0;
+    }
+     .icons {
+         width: 20%;
+     }
+     .quicklinks{
+         flex-basis: 20%;
+         display: block;
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-start;
+         align-items: flex-start; 
+     }
+
+     .quicklinks div h1 {
+         text-align: left;
+     }
+     .quicklinks ul {
+         list-style: none;
+         padding-top: 5%;
+     }
+     .quicklinks ul li a {
+         text-decoration: none;
+         color: inherit ;
+     }
+     .quicklinks ul li {
+         text-align: left;
+     }
+}
